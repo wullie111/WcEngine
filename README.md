@@ -1,7 +1,7 @@
-Corange game engine
+WcEngine game engine
 ===================
 	
-Version 0.8.0
+Version 0.0.1
 
 Written in Pure C, SDL and OpenGL.
 
