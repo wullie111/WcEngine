@@ -127,3 +127,11 @@
 [DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/textures/grey.dds'
 [DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/textures/skin_lookup.dds'
 [DEBUG] (src/centity.c:entity_new_type_id:70) Creating Entity cam (camera)
+[DEBUG] (src/cui.c:ui_elem_new_type_id:125) Creating UI Element framerate (ui_button)
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/ui/pale_orange.dds'
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/fonts/console_font.fnt'
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/fonts/console_font_0.dds'
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/shaders/ui.mat'
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/shaders/ui.vs'
+[DEBUG] (src/casset.c:file_load:282) Loading: '/home/wullie/Documents/WcEngine/code/assets_core/shaders/ui.fs'
+[ERROR] (src/corange.c:corange_signal:8) Program Interrupted
