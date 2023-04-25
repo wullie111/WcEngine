@@ -71,7 +71,7 @@ FAQ
 	
 * __Can I contact you about something?__
 
-	Yes - `contact@theorangeduck.com`
+	Yes - `contact@theorangeduck.com` Note: this is for the creator of Corange NOT the WcEngine extention 
 
   
 Using / Contributing
