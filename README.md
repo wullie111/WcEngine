@@ -2,6 +2,6 @@
 A fork of C orange with some changes
 
 
-WcEngine used Corange as a base, im hoping to add a proper dev UI and some way create a plugin file
+WcEngine used Corange as a base, im working on adding a seperate UI using GTK
 
 for Corange base info see [Corange](Corange.md)
