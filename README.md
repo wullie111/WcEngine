@@ -8,10 +8,12 @@ for Corange base info see [Corange](Corange.md)
 
 to bulid WcEngine you need the requierments from [Corange](Corange.md) as well as 
 
-```  gtk4 ```
+``` gtk4 ```
 first comple libcorange
 ``` cd (directory form gtihub)
     make
     mv libcorange.(could be .dll or /.so) WcEngine
     cd WcEngine
     make```
+
+that sould create WcEngine or WcEngine.exe depending on OS
