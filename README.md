@@ -6,10 +6,7 @@ WcEngine used Corange as a base, im working on adding a seperate UI using GTK
 
 for Corange base info see [Corange](Corange.md)
 
-to bulid WcEngine you need the requierments from [Corange](Corange.md) as well as 
-
-``` gtk4 ```
-first comple libcorange
+to bulid WcEngine you need the requierments from [Corange](Corange.md) as well as  gtk4
 
 ```
     cd (directory form gtihub)
@@ -20,3 +17,5 @@ first comple libcorange
 ```
 
 that sould create WcEngine or WcEngine.exe depending on OS
+
+later i will add an install script for linux user as a .sh  script
