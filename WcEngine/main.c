@@ -4,8 +4,6 @@
 renderer* dr = NULL;
 static bool running = true;
 static SDL_GLContext* load_context = NULL;
-GMenu *menu;
-GtkWidget *window;
 
 // creating the Croange window, camera and fps counter
 void Cinit(){
@@ -13,7 +11,7 @@ void Cinit(){
 	// creating the window
 	graphics_viewport_set_size(1280, 720);
 	graphics_viewport_set_title("render window");
-	asset_hndl opt_graphics = asset_hndl_new_load(P("./.WcEngine/graphics.cfg"));
+	asset_hndl opt_graphics = asset_hndl_new_load(P("graphics.cfg"));
 	dr = renderer_new(opt_graphics);
 	renderer_set_skydome_enabled(dr, false);
 
@@ -26,12 +24,6 @@ void Cinit(){
 	entity_get_as("cam",camera)->far_clip *=4;
 	renderer_set_camera(dr, entity_get("cam"));
 
-	// creating the FPS counter
-	ui_button* framerate = ui_elem_new("framerate", ui_button);
-	ui_button_move(framerate, vec2_new(10, 10));
-	ui_button_resize(framerate, vec2_new(30, 30));
-	ui_button_set_label(framerate, "framerate");
-
 }
 
 // GTK window activation
@@ -39,7 +31,7 @@ static void activate(GtkApplication* app, gpointer user_data){
 
 	// create the builder and load the ui file
 	GtkBuilder *builder = gtk_builder_new ();
-	gtk_builder_add_from_file (builder, "./.WcEngine/builder.ui", NULL);
+	gtk_builder_add_from_file (builder, "builder.ui", NULL);
 
 	// loading the window from the data in builder
 	GObject *window = gtk_builder_get_object (builder, "window");
@@ -51,33 +43,6 @@ static void activate(GtkApplication* app, gpointer user_data){
 
 }
 
-// creating a GTK menu to handle system info, e.g the `FILE` option
-static gint menuBox(GtkWidget *widget, GdkEvent *event){
-
-	// GTK/GDK pointers
-	GtkMenuButton *event_button;
-
-	// checking for failures (not me)
-	g_return_val_if_fail(widget != NULL, FALSE);
-	g_return_val_if_fail(G_IS_MENU(widget), FALSE);
-	g_return_val_if_fail(event != NULL, FALSE);
-
-	// setting up the menu widget so it can be called with g_signal_connect_swapped
-	menu = G_MENU (widget);
-
-	if(event->type == GDK_BUTTON_PRESS){
-		event_button = (GtkMenuButton *) event;
-
-		if(event_button->button == GDK_BUTTON_SECONDARY){
-			gtk_menu_popup (menu, NULL, NULL, NULL, NULL, event_button->button, event_button->time);
-
-			return TRUE;
-		}
-	
-	}
-	return FALSE;
-}
-
 // GTK main call
 static int GTK_Win(int argc, char **argv){
 
@@ -87,9 +52,8 @@ static int GTK_Win(int argc, char **argv){
 	int status;
 
 	// creating the window and calling the `activate` function
-	app = gtk_application_new("org.Wc.WcEngine", G_APPLICATION_DEFAULT_FLAGS);
+	app = gtk_application_new("tk.wullie.WcEngine", G_APPLICATION_DEFAULT_FLAGS);
 	g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
-	g_signal_connect_swapped(window, "button_press_event", G_CALLBACK (menuBox), menu);
 	status = g_application_run(G_APPLICATION(app), argc, argv);
 	g_object_unref(app);
 	
@@ -110,9 +74,9 @@ void rendering_render(){
 int main(int argc, char **argv){
 
 	// load default assets, calls new SDL context and GTK window
-	corange_init("./.WcEngine/assets_core");
-	GTK_Win(argc, argv);
+	corange_init("../assets_core");
 	Cinit();
+	GTK_Win(argc, argv);
 
 	// loop for updating the engine 
 	while(running){
@@ -120,8 +84,6 @@ int main(int argc, char **argv){
 		frame_begin();
 		frame_end_at_rate(60);
 		rendering_render();
-		ui_update();
-		ui_render();
 		renderer_render(dr);
 		graphics_swap();
 		frame_end();

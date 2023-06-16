@@ -14,23 +14,10 @@
         <property name="row-spacing">12</property>
         <property name="column-spacing">12</property>
         <child>
-	  <object class="GtkDropDown">
-            <property name="model">
-              <object class="GtkStringList">
-                <items>
-        	  <item translatable="yes">Factory</item>
-        	  <item translatable="yes">Home</item>
-                  <item translatable="yes">Subway</item>
-                </items>
-              </object>
-  	    </property>
-	  </object>
-        </child>
-        <child>
           <object id="button2" class="GtkButton">
-            <property name="label">Button 2</property>
+            <property name="label">Update RenderWindow</property>
             <layout>
-              <property name="column">1</property>
+              <property name="column">0</property>
               <property name="row">0</property>
             </layout>
           </object>
@@ -41,7 +28,7 @@
             <layout>
               <property name="column">0</property>
               <property name="row">1</property>
-              <property name="column-span">0.2</property>
+              <property name="column-span">1</property>
             </layout>
           </object>
         </child>
