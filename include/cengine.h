@@ -33,6 +33,10 @@
 #include <SDL2/SDL_net.h>
 #include "SDL2/SDL_local.h"
 
+/*WcEngine includes*/
+#include <gtk/gtk.h>
+#include <pthread.h>
+
 #ifndef MAX_PATH
 #define MAX_PATH 512
 #endif
