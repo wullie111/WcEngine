@@ -4,8 +4,8 @@ AR=ar
 SRC = $(wildcard src/*.c) $(wildcard src/*/*.c)
 OBJ = $(addprefix obj/,$(notdir $(SRC:.c=.o)))
 
-CFLAGS = -I ./include -std=gnu99 -Wall -Werror -Wno-unused -O3 -g
-LFLAGS = -lSDL2 -lSDL2_mixer -lSDL2_net -shared -g
+CFLAGS = -I ./include -std=gnu99 `pkg-config --cflags gtk4` -DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_4_2 -Werror -Wno-unused -O3 -g
+LFLAGS = -lSDL2 -lSDL2_mixer `pkg-config --libs gtk4`-lSDL2_net -shared -g
 
 PLATFORM = $(shell uname)
 

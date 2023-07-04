@@ -1,9 +1,13 @@
 #include "corange.h"
 
-// globals 
+// Corange globals 
 renderer* dr = NULL;
 static bool running = true;
 static SDL_GLContext* load_context = NULL;
+
+// Wren globals
+WrenConfiguration config;
+wrenInitConfiguration(&config);
 
 // creating the Croange window, camera and fps counter
 void Cinit(){
