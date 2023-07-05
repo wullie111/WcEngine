@@ -1,6 +1,7 @@
 # WcEngine
 A fork of C orange with some changes
 
+for Licenses check the main [licens](../Licences/License.md)
 
 WcEngine used Corange as a base, im working on adding a seperate UI using GTK
 
