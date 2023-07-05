@@ -5,7 +5,7 @@
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
- NOTE: NOT ALL CODE IS UNDER GLPv3 SEE [Corange license](CornageLicense.md) and [Wren license](WrenLicense) for there respective licenses 
+ NOTE: NOT ALL CODE IS UNDER GLPv3 SEE [Corange license](CornageLicence.md) and [Wren license](WrenLicence) for there respective licenses 
 
                             Preamble
 
