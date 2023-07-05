@@ -1,3 +1,0 @@
-shader vert = ./shaders/metaballs.vs
-shader frag = ./shaders/metaballs.fs
-shader shadows = $CORANGE/shaders/shadows.fs

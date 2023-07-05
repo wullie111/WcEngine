@@ -14,14 +14,20 @@
         <property name="row-spacing">12</property>
         <property name="column-spacing">12</property>
         <child>
-          <object id="button2" class="GtkButton">
-            <property name="label">Update RenderWindow</property>
+          <object id="file" class="GtkButton">
+            <property name="label">file</property>
             <layout>
               <property name="column">0</property>
               <property name="row">0</property>
             </layout>
           </object>
         </child>
+	<child>
+	  <object id="blend" class="GtkButton">
+	     <property name="label">blender</property>
+             <layout>
+	       <propery name="column">1</property>
+	</child>
         <child>
           <object id="quit" class="GtkButton">
             <property name="label">Quit</property>
