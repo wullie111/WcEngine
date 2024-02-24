@@ -1,4 +1,4 @@
-/* Copyright 2024 WULLIE MORRISON
+/* Copyright 2024 WULLIE STUDIO
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,31 +14,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef engine_h
-#define engine_h
+//the heart of the rendering engine
 
-// standard libs
+#ifndef renderengine_h
+#define renderengine_h
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
-#include <time.h>
-#include <signal.h>
-#include <float.h>
-#include <pthread.h>
+#include "engine.h"
 
-// SDL2 libs 
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_opengl.h>
-#include <SDL2/SDL_rwops.h>
-#include <SDL2/SDL_mixer.h>
-#include <SDL2/SDL_net.h>
-
-// misc libs
-
-#ifndef FILE_MAX_PATH
-#define FILE_MAX_PATH 512
-
-#endif
