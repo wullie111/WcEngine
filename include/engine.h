@@ -38,7 +38,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // misc libs
 
+
+// inforamtion on vars 
 #ifndef FILE_MAX_PATH
 #define FILE_MAX_PATH 512
 
+extern char error_buf[ERROR_BUFFER_SIZE];
+extern char error_str[ERROR_BUFFER_SIZE];
+
+// error handling 
+#define error(MSG, ...) { \
+  snprintf(error_str,(ERROR_BUFFER_SIZE-1), "[ERROR] (%s:%s:%i) ", __FILE__, __func__, __LINE__); \
+  snprintf(error_buf,(ERROR_BUFFER_SIZE-1), MSG, ##__VA_ARGS__); strcat(error_str, error_buf);    \
+  error_(error_str); }
+
+#endif
 #endif

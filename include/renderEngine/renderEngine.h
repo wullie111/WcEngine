@@ -21,4 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "engine.h"
 
+// window management
 
+void wRenderWindowSetTitle(const char* title);	// tile for said window
+void wRenderWindowSetPOS(int x, int y);	// optinal position
+void wRenderWindowSetSize(int width, int hight); // size for said window
+
+// cursor managemant 
+void wRenderSetCursorHidden(bool hidden);
+bool wRenderGetCursorHidden();
+#endif
