@@ -1,0 +1,8 @@
+*~
+*.o
+*.log
+*.exe
+*.so
+*.dll
+stdout.txt
+stderr.txt
